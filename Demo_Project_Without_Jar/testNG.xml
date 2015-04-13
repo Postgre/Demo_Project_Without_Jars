@@ -1,0 +1,20 @@
+<suite name="My Test Suite" parallel="methods" thread-count="2">
+ 
+<parameter name="driver" value="C:\\Automation_Framework\\Drivers\\"></parameter> 
+<parameter name="URL" value="http://facebook.com"></parameter> 
+<parameter name="DatatablePath" value="C:\Automation_Framework\DataTable\"></parameter> 
+ 
+<test name="Firefox Test">
+  <parameter name="browser" value="Firefox"></parameter>
+  <packages>
+   <package name="TestScripts" />   
+  </packages>
+</test>
+
+  <listeners>
+  <listener class-name="Utility.RetryListener"/>
+  <listener class-name="atu.testng.reports.listeners.ATUReportsListener"></listener>
+  <listener class-name="atu.testng.reports.listeners.ConfigurationListener"></listener>
+  <listener class-name="atu.testng.reports.listeners.MethodListener"></listener>
+  </listeners>
+</suite>
